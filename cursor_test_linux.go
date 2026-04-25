@@ -102,7 +102,7 @@ func TestCustomIOWriter(t *testing.T) {
 func getFileContent(t *testing.T, fileName string) string {
 	t.Helper()
 
-	content, err := os.ReadFile(fileName)
+	content, err := os.ReadFile(fileName) //nolint:gosec // Tests read temporary files they create.
 	if err != nil {
 		t.Errorf("failed to read file contents: %s", err)
 

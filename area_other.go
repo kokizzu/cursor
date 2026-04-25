@@ -9,5 +9,5 @@ import (
 
 // Update overwrites the content of the Area and adjusts its height based on content.
 func (area *Area) writeArea(content string) {
-	fmt.Fprint(area.writer, content)
+	_, _ = fmt.Fprint(area.writer, content)
 }
